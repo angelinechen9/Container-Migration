@@ -10,7 +10,7 @@ CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS   
 5f98e54075c1   ubuntu    "/bin/bash"   20 minutes ago   Up 19 minutes             nervous_curran
 ```
 
-We are now able to use docker exec -it nervous_curran bash -c "bash ~/test.sh", and it will use the container's resources and output the command results into my terminal window. We checked with docker stats nervous_curran and made sure it was using the container's resources:
+We are now able to use the command ```bash docker exec -it nervous_curran bash -c "bash ~/test.sh"```, and it will use the container's resources and output the command results into my terminal window. We checked with docker stats nervous_curran and made sure it was using the container's resources:
 
 ```bash
 CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O        BLOCK I/O   PIDS
