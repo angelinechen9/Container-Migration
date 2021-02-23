@@ -27,7 +27,6 @@ We running unix commands via python using the subprocess module. The order of un
 ```
 
 ## Resources:
-
 [DoMonit](https://github.com/eon01/DoMonit)                                                                            
 [Docker Memory & CPU Usage Monitoring](https://stackoverflow.com/questions/59750238/python-docker-get-containers-memory-usage-cpu-percentage-programmatically-in-p)
 [Python Docker Image](https://hub.docker.com/_/python)                                                                                
