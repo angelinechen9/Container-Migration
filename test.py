@@ -1,7 +1,8 @@
-import subprocess
-def subprocess_cmd(command):
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
-    proc_stdout = process.communicate()[0].strip()
-    print proc_stdout
+import docker
 
-subprocess_cmd('docker start nervous_curran; docker exec -it nervous_curran bash -c "bash ~/test.sh"; docker stop nervous_curran')
+client = docker.from_env()
+client.containers.run("ubuntu", tty=True, detach=True)
+container = client.containers.list()[0]
+container.start()
+container.exec_run("bash ~/test.sh")
+container.stop()
