@@ -7,6 +7,13 @@ In order to implement a prioritization method, we implemented a controller that 
 
 IoT1 sends task requirements to the controller, the controller assigns IoT1 to CC1, and IoT1 sends the request to CC1. IoT2 sends task requirements to the controller, the controller assigns IoT2 to EC1, and IoT2 sends the request to EC1. IoT3 sends task requirements to the controller, and the controller assigns IoT3 to a container running on a node. IoT4 sends task requirements to the controller. The controller stores the containers running on the nodes in a table. When the controller assigns an IoT device to a container running on a node, the controller checks if there are enough resources on the edge nodes for the request. If there not are enough resources on the edge nodes for the request, containers are migrated from the edge nodes to the cloud nodes.
 
+# Approach
+When we implemented the system, we followed the following steps:
+* How to allocate processing resources in edge and cloud nodes?
+* How to manage resources?
+* How to balance the load of nodes?
+* How to migrate workload between edge and cloud node?
+
 # Resource Allocation
 Containerization is used to allocate processing resources in edge and cloud nodes. Containerization has become an alternative to virtualization because containers are flexible, lightweight, portable, loosely coupled, scalable, and secure. Both containers and virtual machines isolate and allocate resources. In containerization, multiple containers can run on the same machine. In virtualization, the hypervisor allows multiple virtual machines to run on the same machine. While containers virtualize the operating system, virtual machines virtualize the hardware. As a result, containers are more lightweight than virtual machines. In containerization, multiple containers can share the operating system kernel. In virtualization, each virtual machine runs an operating system. Containers take up less space and take less time to start than virtual machines, which allows more containers to run on the same machine.
 
